@@ -134,6 +134,9 @@ public int getEmpId() {
 	}
 	
 	
+	
+	
+	
 
 	
 	
@@ -142,7 +145,15 @@ public int getEmpId() {
 
 
 
-//	super() Call:
+@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", department=" + department + ", designation="
+				+ designation + ", address=" + address + "]";
+	}
+
+
+
+	//	super() Call:
 //		The super() call is an explicit call to the no-argument constructor of the superclass. 
 //		Every class in Java implicitly or explicitly extends Object, 
 //		so super() refers to the constructor of the direct superclass.

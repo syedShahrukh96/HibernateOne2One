@@ -44,8 +44,8 @@ public class App {
     	Transaction tx = session.beginTransaction();
     	
     	
-    	Address addr = new Address("Bangalor","Karnataka",60640);
-    	Employee emp = new Employee("Paja","Executive","Marketing",addr);
+    	//Address addr = new Address("Bangalori","Karnataka",60640);
+    	//Employee emp = new Employee("raja","Executive","Marketing",addr);
     	
 		/*
 		 * The persist method is called on the Session object to save the Employee
@@ -53,9 +53,23 @@ public class App {
 		 * operation is not immediately executed but is queued up until the transaction
 		 * is committed.
 		 */
-		session.persist(emp);
+		//session.persist(emp);
+    	
+    	
+    	
+    	
+    	
+  	
 		
-		System.out.println("recorded");
+		  //this will be in uni-direction 
+    	Address add = session.get(Address.class, 2);
+    	System.out.println(add); // This should print the address details
+    	Employee emp = add.getEmployee();
+    	System.out.println(emp); // This should print the employee details
+   	
+    	
+		
+		System.out.println("all data printed");
 		
 		/*
 		 * This line commits the transaction, meaning all operations performed within
