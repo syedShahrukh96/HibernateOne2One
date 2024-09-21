@@ -82,6 +82,18 @@ public int getEmpId() {
 
 
 
+	public Address getAddress() {
+		return address;
+	}
+
+
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+
+
 	public void setDepartment(String department) {
 		this.department = department;
 	}

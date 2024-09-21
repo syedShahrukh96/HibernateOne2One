@@ -26,8 +26,8 @@ public class Address {
 	private String state;
 	private int pincode;
 	
-	
-	@OneToOne(mappedBy = "address", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	//here with this only address will be delected not the employee object
+	@OneToOne(mappedBy = "address", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	//@JoinColumn(name="EMP-ID")
 	private Employee employee;
 	

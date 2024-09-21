@@ -60,13 +60,22 @@ public class App {
     	
     	
   	
-		
-		  //this will be in uni-direction 
-    	Address add = session.get(Address.class, 2);
-    	System.out.println(add); // This should print the address details
-    	Employee emp = add.getEmployee();
-    	System.out.println(emp); // This should print the employee details
-   	
+//		
+//		  //this will be in uni-direction 
+//    	Address add = session.get(Address.class, 2);
+//    	System.out.println(add); // This should print the address details
+//    	Employee emp = add.getEmployee();
+//    	System.out.println(emp); // This should print the employee details
+//   	
+    	
+    	
+    	
+    	Address adr = session.get(Address.class, 2);
+    	
+    	if(adr != null) {
+    		adr.getEmployee().setAddress(null);
+    		session.remove(adr);
+    	}
     	
 		
 		System.out.println("all data printed");
